@@ -1,4 +1,4 @@
-package com.qacart;
+package com.Qa;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -127,19 +127,7 @@ public class TestCase {
 
     //json path
 
-    @Test
-    public void JsonPath() {
-        test = extent.createTest("Test Using extractFullResponse");
-
-        Response res= given().baseUri("http://localhost:3005")
-                .when().get("getAllmembers")
-                .then().extract().response();
-        String name = res.path("member[0].name");
-        System.out.println(res.asString());
-        System.out.println(name);
-
-        test.pass("This is All Response");
-    }
+    
 
 
 
